@@ -1,0 +1,25 @@
+{
+  "name": "purescript-concur-realworld",
+  "version": "0.1.0",
+  "description": "Realworld example for Purescript-Concur.",
+  "main": "index.js",
+  "scripts": {
+    "test": "spago test",
+    "clean": "rimraf .cache .spago .psci_modules output dist",
+    "build": "spago build",
+    "prod": "spago build && parcel build index.html",
+    "start": "parcel index.html"
+  },
+  "author": "Anupam Jain <ajnsit@gmail.com> (https://github.com/ajnsit)",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "purescript": "^0.12.3",
+    "purescript-psa": "^0.7.3",
+    "spago": "^0.7.2"
+  },
+  "dependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  }
+}
