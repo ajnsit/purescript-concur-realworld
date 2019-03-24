@@ -5,7 +5,19 @@ You can edit this file as you like.
 { name =
     "my-project"
 , dependencies =
-    [ "effect", "console" ]
+    [ "aff"
+    , "affjax"
+    , "argonaut"
+    , "concur-react"
+    , "console"
+    , "effect"
+    , "formatters"
+    , "now"
+    , "precise-datetime"
+    , "remotedata"
+    , "routing-duplex"
+    , "slug"
+    ]
 , packages =
     ./packages.dhall
 }

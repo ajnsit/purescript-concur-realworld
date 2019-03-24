@@ -114,8 +114,52 @@ let mkPackage =
 let upstream =
       https://raw.githubusercontent.com/purescript/package-sets/psc-0.12.3-20190315/src/packages.dhall sha256:08714bc666b16834f0f4cf86d408745ce005c43e3343821e4c3864ef28709177
 
-let overrides = {=}
+let overrides =
+  { concur-react =
+      upstream.concur-react // { version = "v0.3.5" }
+  }
 
-let additions = {=}
+let additions =
+  { slug =
+       mkPackage
+         [ "prelude"
+         , "maybe"
+         , "strings"
+         , "unicode"
+         , "generics-rep"
+         , "argonaut-codecs"
+         ]
+         "https://github.com/thomashoneyman/purescript-slug.git"
+         "v0.2.0"
+  , precise-datetime =
+       mkPackage
+         [ "prelude"
+         , "maybe"
+         , "strings"
+         , "unicode"
+         , "generics-rep"
+         , "argonaut-codecs"
+         , "arrays"
+         , "console"
+         , "datetime"
+         , "either"
+         , "enums"
+         , "foldable-traversable"
+         , "formatters"
+         , "integers"
+         , "js-date"
+         , "lists"
+         , "maybe"
+         , "newtype"
+         , "prelude"
+         , "strings"
+         , "tuples"
+         , "unicode"
+         , "numbers"
+         , "decimals"
+         ]
+         "https://github.com/awakesecurity/purescript-precise-datetime.git"
+         "v5.1.1"
+  }
 
 in  upstream // overrides // additions

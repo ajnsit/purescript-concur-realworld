@@ -19,6 +19,7 @@
     "spago": "^0.7.2"
   },
   "dependencies": {
+    "decimal.js": "^10.1.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5"
   }
